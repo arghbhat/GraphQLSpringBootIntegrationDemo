@@ -1,0 +1,16 @@
+type AccountDetails{
+	id:ID!,
+	productDesc:String,
+	accountOwner:String,
+	taxID:String,
+	issueDate:String
+}
+
+type Query{
+	accountDetails(count: Int):[AccountDetails]
+	accountDetail(id:ID):AccountDetails
+}
+
+type Mutation{
+	createAccountDetail(productDesc:String!,accountOwner:String!,taxID:String!,issueDate:String!):AccountDetails
+}	
